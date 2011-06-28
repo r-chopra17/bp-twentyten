@@ -1,0 +1,519 @@
+/*
+Theme Name: Twenty Ten child theme
+Theme URI: http://wordpress.org/
+Description: The 2010 theme for WordPress is stylish, customizable, simple, and readable -- make it yours with a custom menu, header image, and background. Twenty Ten supports six widgetized areas (two in the sidebar, four in the footer) and featured images (thumbnails for gallery posts and custom header images for posts and pages). It includes stylesheets for print and the admin Visual Editor, special styles for posts in the "Asides" and "Gallery" categories, and has an optional one-column page template that removes the sidebar.
+Author: the WordPress team
+Version: 
+Template:twentyten
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style
+*/
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+/***
+ * The default theme styles.
+ */
+@import url( _inc/css/default.css );
+
+/***
+ * The admin bar default styles
+ */
+@import url( _inc/css/adminbar.css );
+/***
+ * The colors of the theme
+ */
+@import url( _inc/css/colors.css );
+
+/*** Activity Component starts here***/
+
+/***activity upper form part starts here***/
+.padder{
+	padding:0px 10px 0px 0px;
+	font-size:12px;
+	}
+
+.padder form#whats-new-form {
+    border-bottom: 1px solid #F0F0F0;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    
+}
+.padder form#whats-new-form #whats-new-avatar a img{
+	float: left;
+	border: 2px solid #EEEEEE;
+	margin:5px 10px 0px 0px;
+	}
+.padder form#whats-new-form h5 {
+    color: #444444;
+    font-size: 14px;
+    font-weight: normal;
+	display:inline;
+	font-family:arial;
+}
+.padder form#whats-new-form #whats-new-content {margin-left: 67px;}
+.padder form#whats-new-form #whats-new-textarea {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #D1D1D1;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+    color: #666666;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+.padder form#whats-new-form textarea {
+    font-family: inherit;
+    font-size: 14px;
+    height: 50px;
+    margin: 0;
+    width: 100%;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	border:none;
+}
+
+.padder form#whats-new-form #whats-new-submit {
+    float: right;
+    margin: 0;
+}
+.padder form#whats-new-form #whats-new-options select { max-width: 200px;}
+
+#wrapper input[type="submit"] ,.activity-list div.activity-meta a {
+    -moz-border-radius: 14px 14px 14px 14px;
+    background: url("i/white-grad.png") repeat-x scroll 0 0 #F2F2F2;
+    border: 1px solid #CCCCCC;
+    color: #333333;
+    height: 28px;
+    padding: 0 10px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.ajax-loader {
+    background: url("i/ajax-loader.gif") no-repeat scroll left center transparent !important;
+    display: none;
+    padding: 8px;
+}
+div.item-list-tabs ul li a span{padding:0px;}
+/***activity upper form part ends here***/
+
+/***common navigation part starts here***/
+div.item-list-tabs ul {
+    width: 100%;
+}
+div.item-list-tabs {
+    background:#636363;
+    clear: left;
+	margin: 20px 0 3px;
+    overflow: hidden;
+    width: 680px;
+}
+div.item-list-tabs ul {width: 100%;}
+div.item-list-tabs ul li {
+    float: left;
+    margin: 6px 0 0 5px;
+	color:#fff;
+}
+div.item-list-tabs ul li:first-child { margin-left: 20px;}
+div.item-list-tabs ul li.selected a, div.item-list-tabs ul li.current a {
+    background-color: #FFFFFF;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-topright:3px;
+	-webkit-border-radius-topleft:3px;
+	-webkit-border-radius-topright:3px;
+	-khtml-border-radius-topleft:3px;
+	-khtml-border-radius-topright:3px;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+    color: #000;
+    font-weight: normal;
+}
+
+div.item-list-tabs ul li a, div.item-list-tabs ul li span {
+    color: #fff;
+    
+    padding: 3px 10px;
+    text-decoration: none;
+}
+div#subnav.item-list-tabs {
+    background: #636363;
+    margin-top: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+	
+}
+div.item-list-tabs ul li:first-child {margin-left: 20px;}
+
+div.item-list-tabs ul li.last {
+    float: right;
+    margin: 2px 5px 0 0;
+	color:#fff;
+}
+div.item-list-tabs ul li.last select{
+	border:none;
+	margin-top:2px;
+	}
+
+/***common navigation part ends here***/
+
+/***activity post part ends here***/
+.padder ul#activity-stream li{border-top: 1px solid #f0f0f0;}
+ul.activity-list li {
+    overflow: hidden;
+    padding: 20px 0 10px 0;
+}
+
+ul.item-list li {
+    padding: 8px 0;
+    position: relative;
+}
+ul.item-list li img.avatar {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.activity-list .activity-avatar img {
+    height: 50px;
+    width: 50px;
+}
+.activity-list .activity-content { margin-left: 70px;}
+.activity-list .activity-content .activity-header, .activity-list .activity-content .comment-header {
+    color: #888888;
+    font-size: 11px;
+    line-height: 220%;
+}
+.activity-list p {
+    color: #555555;
+    margin-top: 5px;
+}
+
+p:last-child { margin-bottom: 0;}
+.activity-list .activity-header a:first-child, span.highlight,.activity-comments .acomment-meta >a{
+    color: #3A66DD;
+    margin-right: 3px;
+    padding: 3px 3px 3px 4px;
+    text-decoration: underline;
+	
+}
+.acomment-meta{
+	line-height:18px;
+	font-family: "Helvetica Neue",Arial,Helvetica,"Nimbus Sans L",sans-serif;
+	font-size:10px;
+	}
+.activity-comments .acomment-meta a{padding:2px 3px;}
+.activity-header  p a{text-decoration:none;color:#3A66DD;}
+.activity-comments .acomment-meta .acomment-reply,.activity-comments .acomment-meta .acomment-delete{
+	text-decoration:none;
+	background:none;
+	border:none;
+	color:#0066CC;
+	}
+
+.activity-list .activity-content span.time-since {
+    color: #BBBBBB;
+}
+.activity-list .activity-content .activity-inner, .activity-list .activity-content blockquote {
+    margin: 5px 0 0px 2px;
+    overflow: hidden;
+}
+.activity-list div.activity-meta{margin:10px 0px 8px 0px;}
+
+/***reply and favourite buttons starts here***/
+.activity-list div.activity-meta a ,#wrapper .activity-comments input{
+	padding:3px 10px;
+    text-decoration: none;
+	color: #545454;
+	margin-right:10px;
+    font-size: 12px;
+}
+
+/***reply and favourite buttons ends here***/
+
+div.activity-comments {
+    -moz-border-radius: 3px 3px 3px 3px;
+    margin: 0 0 0 75px;
+    position: relative;
+    width: auto;
+	font-size:12px;
+}
+
+div.activity-comments form.ac-form {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #DDDDDD;
+    display: none;
+    margin: 20px 0 0px 0px;
+    padding: 8px;
+}
+div.activity-comments form div.ac-reply-avatar {float: left;}
+ul.item-list li img.avatar {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+div.ac-reply-avatar img {border: 2px solid #FFFFFF !important;}
+div.activity-comments form div.ac-reply-content {
+    color: #888888;
+    font-size: 11px;
+    margin-left: 50px;
+    padding-left: 15px;
+}
+div.activity-comments form .ac-textarea {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px inset #CCCCCC;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+div.activity-comments form textarea {
+    border: none;
+	background:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	-box-shadow:none;
+    color: #555555;
+    font-family: inherit;
+    font-size: 11px;
+    height: 60px;
+    padding: 0;
+    width: 100%;
+}
+div.activity-comments form input { margin-top: 5px;}
+div.activity-comments ul {
+    border: medium none;
+    list-style: none outside none;
+}
+
+div.activity-comments > ul {
+    background: none repeat scroll 0 0 #F5F5F5;
+	border:1px solid #DDDDDD;
+    padding: 0 10px;
+	margin-top:20px;
+}
+div.activity-comments > ul li{border-bottom:1px solid #bbb;}
+div.activity-comments ul li ul li:last-child,div.activity-comments ul li:last-child{border-bottom:none;}
+div.activity-comments ul li ul {
+	margin-left:30px;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	padding:0px 10px;
+}
+
+/*** Activity Component ends here***/
+
+/*** Member Component starts here***/
+div.dir-list{font-size:12px;}
+div .dir-form h3{
+	border-bottom:1px solid #f0f0f0;
+	padding-bottom:20px;
+	margin-bottom:18px;
+}
+div.dir-search {
+    float: right;
+    margin: -62px 0 0;
+}
+div.dir-search input{
+	padding:3px;
+	font-size:11px;
+}
+#pag-top,#messages-dir-count{
+	margin:10px 0px;
+	border-bottom:1px dashed #ccc;
+}
+#pag-bottom{
+	clear:left;
+	margin:10px 0px;
+	border-top:1px dashed #ccc;
+	}
+div.dir-list ul.item-list li {border-bottom:1px solid #f0f0f0;}
+div.dir-list ul.item-list li:last-child{border-bottom:none;}
+ul.item-list span.activity,div#item-header-content span.activity{
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #F5F5F5;
+    color: #555555;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: normal;
+    margin-top: 10px;
+    padding: 10px 6px;
+	line-height:0px;
+    text-decoration: none;
+}
+ul.item-list li .item-title{line-height:18px;}
+ul.item-list li div.action {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 10px;
+}
+div.generic-button a {
+    background:#FAFAFA;
+    border: 1px solid #DDDDDD;
+    color: #888888;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 3px 10px;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+/*** Member Component ends here***/
+/*** Profile Component starts here***/
+div#item-header h2 span.highlight{
+	background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #F5F5F5;
+    color: #555555;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 10px 6px;
+	line-height:0px;
+    text-decoration: none;
+
+}
+div#item-header {
+	overflow: hidden;
+	margin-bottom:10px;
+	}
+
+div#item-header img.avatar {
+    float: left;
+    margin: 0 15px 25px 0;
+}
+div#item-header h2 {margin: 8px 0 15px;}
+div#item-header h2 a {
+    color: #777777;
+    font-size: 30px;
+    text-decoration: none;
+	float:left;
+	padding-right:10px;
+}
+
+div#item-header div#item-meta {
+    color: #AAAAAA;
+    font-size: 14px;
+    margin: 15px 0 5px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+div#item-header div#item-meta a{font-size: 12px;}
+#item-header-avatar a img {margin-right: 10px;}
+
+div#item-header div#item-header-content {margin-left: 170px;}
+body.my-activity .padder form#whats-new-form,body.my-groups .padder form#whats-new-form{
+	border-bottom:none;
+	padding-bottom:10px;
+	}
+/*** Profile Component ends here***/
+
+/*** Sidebar starts here***/	
+#sidebar-me{margin-bottom:10px;}
+div#primary div#sidebar-me img.avatar {
+    float: left;
+    margin: 0 10px 15px 0;
+}
+div#primary div#sidebar-me h4 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+div#primary div#sidebar-me h4 a{
+	color:#222222;
+	font-weight: bold;
+	}
+/*** Sidebar ends here***/
+
+/*** Login component starts here***/
+
+#sidebar-login-form label{display:block;}
+
+/*** Login component ends here***/
+
+/*** Group component starts here***/
+#item-header #item-actions {
+    float: right;
+}
+#item-header #item-actions img {
+    float: right;
+    margin-top: 10px;
+    padding: 0;
+}
+body.my-groups div#item-header h2{margin:0px;}
+body.my-groups div#item-header h2 a {
+	display:block;
+	width:370px;
+}
+#group-settings-form #group-name{display:block;}
+#group-settings-form #group-desc{float:left;}
+a.button,ul.button-nav li a, div.generic-button a {
+    background: url("i/white-grad.png") repeat-x scroll 0 0 #F2F2F2;
+    border: 1px solid #DDDDDD;
+    color:#333333;
+	text-shadow:0 1px 0 #FFFFFF;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 3px 10px;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+#group-create-body label, form.standard-form span.label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+#wrapper .submit input{
+	border: 1px solid #D1D1D1;
+    color: #666666;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 5px 7px;
+	margin-top:10px;
+}
+/*** Group component ends here***/
+
+/*** Profile page of member starts here***/
+
+.profile .base{margin-bottom:20px;}
+.profile .profile-fields{
+	margin-bottom:10px;
+	font-size:14px;
+}
+.profile .profile-fields tbody tr td{padding-right:100px;}
+.profile .base .profile-fields tbody tr td{padding-right:140px;}
+.profile h4{
+	font-size:18px;
+	margin-bottom:10px;
+	color:#555;
+}
+.profile .profile-fields tbody tr td.data a {font-size:14px;}
+#profile-edit-form .button-nav li{margin-bottom:20px;}
+#profile-edit-form .button-nav li.current a{
+	background:#DADADA;
+	display:inline; 
+	margin-bottom: 20px;
+}
+.profile p{margin-bottom:10px;}
+#item-body .profile{
+	width:700px;
+	margin-top:10px;
+}
+
+/*** Profile page of member ends here***/
+
+/*** Css of inner pages starts here ***/
+#send_message_form label{display:block;}
+#message-threads span{display:block;}
+#settings-form label,#settings-form input{display:block;}
+#settings-form label{margin-top:10px;}
+#content th.yes{padding-right:10px;}
+
+/*** Css of inner pages ends here ***/
+
+/*** Widget section css starts here ***/
+.widget-area .avatar-block .item-avatar{
+	width:50px;
+	height:50px;
+	float:left;
+	margin:0px 5px 15px 0px;
+}
+.widget-container{clear:left;}
+/*** Widget section css starts here ***/
